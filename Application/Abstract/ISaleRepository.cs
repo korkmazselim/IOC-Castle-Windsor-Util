@@ -1,9 +1,9 @@
-﻿using Models;
+﻿using Lets.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Application.Abstract
+namespace Lets.Application.Abstract
 {
     public interface ISaleRepository
     {

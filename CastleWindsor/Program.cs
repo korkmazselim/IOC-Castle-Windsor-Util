@@ -1,12 +1,13 @@
-﻿using Application.Abstract;
-using Application.Repositories;
+﻿using Lets.Application.Abstract;
+using Lets.Application.Repositories;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
 using System;
 using System.Reflection;
-using Models;
-using Application;
+using Lets.Models;
+using Lets.Application;
+using Lets.Utils;
 
 namespace CastleWindsor
 {
@@ -14,10 +15,10 @@ namespace CastleWindsor
     {
         static void Main(string[] args)
         {
-            Utils.IocUtil.InstanceWindsorContainer();
+            IocUtil.InstanceWindsorContainer();
 
-            var _CashSaleInstance =Utils.IocUtil.Resolve<ISaleInstance>("CashSaleInstance");
-            var _WebSaleInstance =Utils.IocUtil.Resolve<ISaleInstance>("WebSaleInstance");
+            var _CashSaleInstance = IocUtil.Resolve<ISaleInstance>("CashSaleInstance");
+            var _WebSaleInstance = IocUtil.Resolve<ISaleInstance>("WebSaleInstance");
             _CashSaleInstance.WhoIAm();
             _WebSaleInstance.WhoIAm();
 

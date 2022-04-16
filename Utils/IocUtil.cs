@@ -1,13 +1,16 @@
-﻿using Application;
-using Application.Abstract;
-using Application.Repositories;
+﻿using Lets.Application;
+using Lets.Application.Abstract;
+using Lets.Application.Repositories;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Castle.Windsor.Installer;
+using Castle.Core.Resource;
+using Castle.Windsor.Configuration.Interpreters;
 
-namespace Utils
+namespace Lets.Utils
 {
     public static class IocUtil
     {
@@ -18,13 +21,28 @@ namespace Utils
             {
                 _WindsorContainer = new WindsorContainer();
                 _WindsorContainer.Install(new RepositoryInstaller());
-                _WindsorContainer.Register(
-                    Component.For<ISaleRepository>().ImplementedBy<WebSaleRepository>().LifestyleTransient(),
-                    Component.For<ISaleRepository>().ImplementedBy<CashSaleRepository>().LifestyleTransient()
-                    );
 
-                _WindsorContainer.Register(Component.For<ISaleInstance>().ImplementedBy<CashSaleInstance>().DependsOn(Dependency.OnComponent<ISaleRepository, CashSaleRepository>()).Named("CashSaleInstance"));
-                _WindsorContainer.Register(Component.For<ISaleInstance>().ImplementedBy<WebSaleInstance>().DependsOn(Dependency.OnComponent<ISaleRepository, WebSaleRepository>()).Named("WebSaleInstance"));
+                _WindsorContainer.Register(
+                    Component.For<ISaleRepository>().
+                    ImplementedBy<WebSaleRepository>().
+                    LifestyleTransient());
+
+                _WindsorContainer.Register(
+                    Component.For<ISaleRepository>().
+                    ImplementedBy<CashSaleRepository>().
+                    LifestyleTransient());
+
+                _WindsorContainer.Register(
+                    Component.For<ISaleInstance>().
+                    ImplementedBy<CashSaleInstance>().
+                    DependsOn(Dependency.OnComponent<ISaleRepository, CashSaleRepository>()).
+                    Named("CashSaleInstance"));
+
+                _WindsorContainer.Register(
+                    Component.For<ISaleInstance>().
+                    ImplementedBy<WebSaleInstance>().
+                    DependsOn(Dependency.OnComponent<ISaleRepository, WebSaleRepository>()).
+                    Named("WebSaleInstance"));
             }
         }
 

@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Application\Application.csproj" />
-    <ProjectReference Include="..\Models\Models.csproj" />
-    <ProjectReference Include="..\Utils\Utils.csproj" />
+    <ProjectReference Include="..\Application\Lets.Application.csproj" />
+    <ProjectReference Include="..\Models\Lets.Models.csproj" />
+    <ProjectReference Include="..\Utils\Lets.Utils.csproj" />
   </ItemGroup>
 
 </Project>

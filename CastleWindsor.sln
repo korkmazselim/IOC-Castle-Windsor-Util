@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CastleWindsor", "CastleWindsor\CastleWindsor.csproj", "{453C5427-C44D-49DD-B36F-CF10A67582A9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{950B8670-5B1B-4AA6-9228-5A7961415BF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lets.Application", "Application\Lets.Application.csproj", "{950B8670-5B1B-4AA6-9228-5A7961415BF4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{20952628-1168-4AEC-9FD3-975A19FF842D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lets.Models", "Models\Lets.Models.csproj", "{20952628-1168-4AEC-9FD3-975A19FF842D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{ADEC9C00-5986-41D1-8D0F-789C736BCCC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lets.Infrastructure", "Infrastructure\Lets.Infrastructure.csproj", "{ADEC9C00-5986-41D1-8D0F-789C736BCCC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{086179BA-F98A-43C6-8D3A-4D5EEFF86A66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lets.Utils", "Utils\Lets.Utils.csproj", "{086179BA-F98A-43C6-8D3A-4D5EEFF86A66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

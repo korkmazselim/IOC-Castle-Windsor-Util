@@ -1,10 +1,10 @@
-﻿using Application.Abstract;
-using Models;
+﻿using Lets.Application.Abstract;
+using Lets.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Application.Repositories
+namespace Lets.Application.Repositories
 {
     public class CashSaleRepository : ISaleRepository
     {
